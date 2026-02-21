@@ -11,16 +11,16 @@ jobs:
 
     steps:
       - name: Ping #1
-        run: curl -s https://auralis-c6ne.onrender.com/health > /dev/null
+        run: curl -s https://auralis-c6ne.onrender.com/health
 
       - name: Wait 2 minutes
         run: sleep 120
 
       - name: Ping #2
-        run: curl -s https://auralis-c6ne.onrender.com/health > /dev/null
+        run: curl -s https://auralis-c6ne.onrender.com/health
 
       - name: Wait 2 minutes
         run: sleep 120
 
       - name: Ping #3
-        run: curl -s https://auralis-c6ne.onrender.com/health > /dev/null
+        run: curl -s https://auralis-c6ne.onrender.com/health
