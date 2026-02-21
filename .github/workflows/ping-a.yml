@@ -9,4 +9,4 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - run: curl -s https://auralis-c6ne.onrender.com/health > /dev/null
+      - run: curl -s https://auralis-c6ne.onrender.com/health
