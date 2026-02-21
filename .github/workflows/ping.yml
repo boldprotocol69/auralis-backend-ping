@@ -1,0 +1,26 @@
+name: Keep Render Alive
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping #1
+        run: curl -s https://auralis-c6ne.onrender.com/health > /dev/null
+
+      - name: Wait 2 minutes
+        run: sleep 120
+
+      - name: Ping #2
+        run: curl -s https://auralis-c6ne.onrender.com/health > /dev/null
+
+      - name: Wait 2 minutes
+        run: sleep 120
+
+      - name: Ping #3
+        run: curl -s https://auralis-c6ne.onrender.com/health > /dev/null
